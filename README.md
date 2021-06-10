@@ -1,4 +1,4 @@
-<img src="https://i.hizliresim.com/iu3nstu.png"/>
+<img src="https://i.hizliresim.com/gb8l35c.png"/>
 <img src="https://i.hizliresim.com/gsnf3n5.png"/>
 # Getting Started with Create React App
 
