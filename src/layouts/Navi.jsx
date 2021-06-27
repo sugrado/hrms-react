@@ -1,41 +1,36 @@
-import React from "react";
-import { Button, Container, Dropdown, Menu } from "semantic-ui-react";
+import React, { useState } from "react";
+import { Container, Menu } from "semantic-ui-react";
+import SignedOut from "./SignedOut";
+import SignedIn from "./SignedIn";
+import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Navi() {
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  const history = useHistory();
+  function handleSignOut() {
+    setIsAuthenticated(false);
+    history.push("/");
+  }
+  function handleSignIn() {
+    setIsAuthenticated(true);
+  }
   return (
     <div>
       <Menu inverted fixed="top" size="small">
         <Container>
-          <Menu.Item name="home" />
-          <Menu.Item name="messages" />
-
+          <Menu.Item>
+            <Link to="/">Home</Link>
+          </Menu.Item>
+          <Menu.Item>
+            <Link to="/advertisement/add">Add Advertisement</Link>
+          </Menu.Item>
           <Menu.Menu position="right">
-            <Dropdown item text="Employer">
-              <Dropdown.Menu>
-                <Dropdown.Item>
-                  <Button inverted color="green">
-                    Register
-                  </Button>
-                </Dropdown.Item>
-                <Dropdown.Item>
-                  <Button inverted color="olive">
-                    Login
-                  </Button>
-                </Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-
-            <Menu.Item>
-              <Button.Group>
-                <Button inverted color="green">
-                  Register
-                </Button>
-                <Button.Or />
-                <Button inverted color="olive">
-                  Login
-                </Button>
-              </Button.Group>
-            </Menu.Item>
+            {isAuthenticated ? (
+              <SignedIn signOut={handleSignOut} />
+            ) : (
+              <SignedOut signIn={handleSignIn} />
+            )}
           </Menu.Menu>
         </Container>
       </Menu>
