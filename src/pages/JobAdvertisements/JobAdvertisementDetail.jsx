@@ -46,7 +46,7 @@ export default function JobAdvertisementDetail() {
           </Grid.Column>
           <Grid.Column width={4}>
             <Card>
-              <Image src="https://turklegal.com.tr/en/news/media/posts/65/header_011.jpg" />
+              <Image src={jobAdvertisement.employer?.photo} />
               <Card.Content style={{ textAlign: "left" }}>
                 <Card.Header>Company Info</Card.Header>
                 <Card.Meta>Location: {jobAdvertisement.city?.name}</Card.Meta>

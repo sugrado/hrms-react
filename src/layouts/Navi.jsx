@@ -23,6 +23,9 @@ export default function Navi() {
             <Link to="/">Home</Link>
           </Menu.Item>
           <Menu.Item>
+            <Link to="/advertisement-requests">Requests</Link>
+          </Menu.Item>
+          <Menu.Item>
             <Link to="/advertisement/add">Add Advertisement</Link>
           </Menu.Item>
           <Menu.Menu position="right">

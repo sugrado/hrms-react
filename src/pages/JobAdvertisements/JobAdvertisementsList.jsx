@@ -32,7 +32,7 @@ export default function JobAdvertisementsList() {
                 <Image
                   floated="right"
                   size="tiny"
-                  src="https://i.hizliresim.com/jqamjh0.png"
+                  src="https://i.hizliresim.com/8trbghf.jpg"
                 />
               ) : (
                 ""
