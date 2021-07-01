@@ -2,7 +2,7 @@ import { useField } from "formik";
 import React from "react";
 import { FormField, Label } from "semantic-ui-react";
 
-export default function HrmsNumberInput({ ...props }) {
+export default function SugradoNumberInput({ ...props }) {
   const [field, meta] = useField(props);
 
   return (

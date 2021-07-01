@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 import { Route } from "react-router";
 import JobAdvertisementDetail from "../pages/JobAdvertisements/JobAdvertisementDetail";
 import JobAdvertisementAdd from "../pages/JobAdvertisements/JobAdvertisementAdd";
-import AdvertisementRequestsList from "../pages/AdvertisementRequestsList";
+import AdvertisementRequestsList from "../pages/JobAdvertisements/AdvertisementRequestsList";
 import { ToastContainer } from "react-toastify";
 
 export default function Dashboard() {
