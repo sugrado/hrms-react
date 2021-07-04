@@ -28,6 +28,9 @@ export default function Navi() {
           <Menu.Item>
             <Link to="/advertisement/add">Add Advertisement</Link>
           </Menu.Item>
+          <Menu.Item>
+            <Link to="/job-positions/add">Add Job Position</Link>
+          </Menu.Item>
           <Menu.Menu position="right">
             {isAuthenticated ? (
               <SignedIn signOut={handleSignOut} />

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 import { Card, Button, Icon, Grid, Image } from "semantic-ui-react";
 import { useParams } from "react-router-dom";

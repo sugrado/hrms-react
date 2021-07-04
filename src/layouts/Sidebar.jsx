@@ -1,6 +1,6 @@
 import React from "react";
 import CityList from "../pages/CityList";
-import JobPositionList from "../pages/JobPositionList";
+import JobPositionList from "../pages/JobPositions/JobPositionList";
 
 
 export default function Sidebar() {
