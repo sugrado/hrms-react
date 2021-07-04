@@ -35,7 +35,7 @@ export default function JobAdvertisementAdd() {
         className="ui form"
         style={{ paddingRight: "30em", marginLeft: "10em" }}
       >
-        <SugradoTextInput name="name" placeholder="Job position name" />
+        <SugradoTextInput name="name" placeholder="Job position name" label="Name"/>
         <Button color="green" type="submit">
           Add
         </Button>

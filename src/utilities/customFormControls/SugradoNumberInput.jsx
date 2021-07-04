@@ -7,6 +7,9 @@ export default function SugradoNumberInput({ ...props }) {
 
   return (
     <FormField error={meta.touched && !!meta.error}>
+      <label style={{ float: "left" }} htmlFor={props.id || props.name}>
+        {props.label}
+      </label>
       <input type="number" {...field} {...props} />
       {meta.touched && !!meta.error ? (
         <Label pointing basic color="red" content={meta.error}></Label>

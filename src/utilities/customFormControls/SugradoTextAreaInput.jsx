@@ -6,13 +6,14 @@ export default function SugradoTextAreaInput({ ...props }) {
   const [field, meta] = useField(props);
 
   return (
-    <div>
-      <FormField error={meta.touched && !!meta.error}>
-        <textarea {...field} {...props} />
-        {meta.touched && !!meta.error ? (
-          <Label pointing basic color="red" content={meta.error}></Label>
-        ) : null}
-      </FormField>
-    </div>
+    <FormField error={meta.touched && !!meta.error}>
+      <label style={{ float: "left" }} htmlFor={props.id || props.name}>
+        {props.label}
+      </label>
+      <textarea {...field} {...props} />
+      {meta.touched && !!meta.error ? (
+        <Label pointing basic color="red" content={meta.error}></Label>
+      ) : null}
+    </FormField>
   );
 }

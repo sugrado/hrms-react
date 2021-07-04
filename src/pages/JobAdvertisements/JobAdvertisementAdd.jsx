@@ -7,6 +7,7 @@ import SugradoTextAreaInput from "../../utilities/customFormControls/SugradoText
 import SugradoNumberInput from "../../utilities/customFormControls/SugradoNumberInput";
 import SugradoDateTimeInput from "../../utilities/customFormControls/SugradoDateTimeInput";
 import SugradoSelectBoxInput from "../../utilities/customFormControls/SugradoSelectBoxInput";
+import SugradoCheckBoxInput from "../../utilities/customFormControls/SugradoCheckBoxInput";
 import CityService from "../../services/CityService";
 import JobPositionService from "../../services/JobPositionService";
 import EmploymentTypeService from "../../services/EmploymentTypeService";
@@ -89,49 +90,57 @@ export default function JobAdvertisementAdd() {
         style={{ paddingRight: "30em", marginLeft: "10em" }}
       >
         <SugradoSelectBoxInput label="City" name="city.id" options={cities} />
+
         <SugradoSelectBoxInput
           label="Job Position"
           name="jobPosition.id"
           options={jobPositions}
         />
+
         <SugradoSelectBoxInput
           label="Employment Type"
           name="employmentType.id"
           options={employmentTypes}
         />
-        <label htmlFor="releaseDate" style={{ float: "left" }}>
-          Release Date
-        </label>
-        <SugradoDateTimeInput name="releaseDate" placeholder="Release date" />
 
-        <label htmlFor="applicationDeadline" style={{ float: "left" }}>
-          Deadline
-        </label>
+        <SugradoCheckBoxInput name="remote" children="Is remote?" />
+
+        <SugradoDateTimeInput
+          name="releaseDate"
+          placeholder="Release date"
+          label="Release Date"
+        />
+
         <SugradoDateTimeInput
           name="applicationDeadline"
           placeholder="Deadline"
+          label="Deadline"
         />
-        <label htmlFor="openPositionNumber" style={{ float: "left" }}>
-          Open Position Number
-        </label>
+
         <SugradoNumberInput
           name="openPositionNumber"
           placeholder="Open position number"
+          label="Open Position Number"
         />
-        <label htmlFor="minSalary" style={{ float: "left" }}>
-          Min salary (Optional)
-        </label>
-        <SugradoNumberInput name="minSalary" placeholder="Minimum salary" />
 
-        <label htmlFor="maxSalary" style={{ float: "left" }}>
-          Max salary (Optional)
-        </label>
-        <SugradoNumberInput name="maxSalary" placeholder="Maximum salary" />
-        <label htmlFor="content" style={{ float: "left" }}>
-          Content
-        </label>
-        <SugradoTextAreaInput name="content" placeholder="Content" />
-        <br />
+        <SugradoNumberInput
+          name="minSalary"
+          placeholder="Minimum salary"
+          label="Min salary (Optional)"
+        />
+
+        <SugradoNumberInput
+          name="maxSalary"
+          placeholder="Maximum salary"
+          label="Max salary (Optional)"
+        />
+
+        <SugradoTextAreaInput
+          name="content"
+          placeholder="Content"
+          label="Content"
+        />
+
         <Button color="green" type="submit">
           Add
         </Button>

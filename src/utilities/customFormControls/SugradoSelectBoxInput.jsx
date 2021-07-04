@@ -1,8 +1,10 @@
 import { useField } from "formik";
+import { FormField, Label } from "semantic-ui-react";
+
 export default function SugradoSelectBoxInput({ ...props }) {
   const [field, meta] = useField(props);
   return (
-    <div>
+    <FormField>
       <label style={{ float: "left" }} htmlFor={props.id || props.name}>
         {props.label}
       </label>
@@ -17,9 +19,8 @@ export default function SugradoSelectBoxInput({ ...props }) {
         })}
       </select>
       {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
+        <Label pointing basic color="red" content={meta.error}></Label>
       ) : null}
-      <br />
-    </div>
+    </FormField>
   );
 }
