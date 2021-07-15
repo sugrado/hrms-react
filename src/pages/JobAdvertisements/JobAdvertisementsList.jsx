@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Image, Form, Label } from "semantic-ui-react";
+import { Card, Image, Form } from "semantic-ui-react";
 import { useEffect, useState } from "react";
 import JobAdvertisementService from "../../services/JobAdvertisementService";
 
@@ -20,9 +20,8 @@ export default function JobAdvertisementsList() {
     let result = [];
     result = allData.filter((data) => {
       return (
-        data.jobPosition.name.toLowerCase().search(value) !== -1 ||
         data.employmentType.name.toLowerCase().search(value) !== -1 ||
-        data.employer.companyName.toLowerCase().search(value) !== -1
+        data.city.name.toLowerCase().search(value) !== -1
       );
     });
     setFilteredData(result);
@@ -31,12 +30,15 @@ export default function JobAdvertisementsList() {
   return (
     <div>
       <Form>
-        <label>Search Text:</label>
+        <label style={{ fontStyle: "italic", fontWeight: "bold" }}>
+          Search For Location or Employment Type
+        </label>
         <Form.Field inline>
           <input
             style={{ marginBottom: "20px" }}
             type="text"
             onChange={(event) => handleSearch(event)}
+            placeholder="Type..."
           />
         </Form.Field>
       </Form>
@@ -65,7 +67,9 @@ export default function JobAdvertisementsList() {
 
               <Card.Header>{advert.jobPosition.name}</Card.Header>
               <Card.Meta>{advert.employer.companyName}</Card.Meta>
-              <Card.Meta>{advert.employmentType.name}</Card.Meta>
+              <Card.Meta>
+                {advert.city.name} - {advert.employmentType.name}
+              </Card.Meta>
               <Card.Description style={{ textAlign: "right" }}>
                 Deadline: {advert.releaseDate}
               </Card.Description>

@@ -23,7 +23,10 @@ export default function Navi() {
             <Link to="/">Home</Link>
           </Menu.Item>
           <Menu.Item>
-            <Link to="/advertisement-requests">Requests</Link>
+            <Link to="/advertisement-requests">Advertisement Requests</Link>
+          </Menu.Item>
+          <Menu.Item>
+            <Link to="/employer-update-requests">Update Requests</Link>
           </Menu.Item>
           <Menu.Item>
             <Link to="/advertisement/add">Add Advertisement</Link>

@@ -8,6 +8,8 @@ import JobAdvertisementAdd from "../pages/JobAdvertisements/JobAdvertisementAdd"
 import AdvertisementRequestsList from "../pages/JobAdvertisements/AdvertisementRequestsList";
 import JobPositionAdd from "../pages/JobPositions/JobPositionAdd"
 import { ToastContainer } from "react-toastify";
+import EmployerDetail from "../pages/Employers/EmployerDetail";
+import EmployerUpdateRequests from "../pages/Employers/EmployerUpdateRequests";
 
 export default function Dashboard() {
   return (
@@ -25,6 +27,8 @@ export default function Dashboard() {
           <Route path="/advertisements/:id" component={JobAdvertisementDetail}/>
           <Route path="/advertisement/add" component={JobAdvertisementAdd} />
           <Route path="/job-positions/add" component={JobPositionAdd} />
+          <Route path="/employer/:id" component={EmployerDetail} />
+          <Route path="/employer-update-requests" component={EmployerUpdateRequests} />
           </Grid.Column>
         </Grid.Row>
       </Grid>
