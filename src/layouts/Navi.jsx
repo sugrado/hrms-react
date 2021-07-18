@@ -34,6 +34,7 @@ export default function Navi() {
           <Menu.Item>
             <Link to="/job-positions/add">Add Job Position</Link>
           </Menu.Item>
+
           <Menu.Menu position="right">
             {isAuthenticated ? (
               <SignedIn signOut={handleSignOut} />
@@ -41,6 +42,9 @@ export default function Navi() {
               <SignedOut signIn={handleSignIn} />
             )}
           </Menu.Menu>
+          <Menu.Item>
+            <Link to="/my-favourites">My Favourites</Link>
+          </Menu.Item>
         </Container>
       </Menu>
     </div>
