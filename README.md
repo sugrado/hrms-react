@@ -1,5 +1,3 @@
-<img src="https://i.hizliresim.com/896pydc.png"/>
-<img src="https://i.hizliresim.com/2587x1m.png"/>
 <img src="https://i.hizliresim.com/gsnf3n5.png"/>
 # Getting Started with Create React App
 
